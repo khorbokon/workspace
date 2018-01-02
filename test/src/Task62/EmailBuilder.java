@@ -1,6 +1,6 @@
 package Task62;
 
-public class EmailBuilder {
+public class EmailBuilder{
     private Email Email;
 
 }

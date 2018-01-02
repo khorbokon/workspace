@@ -1,17 +1,17 @@
-package Task54;
+package Task57;
 
-public class Student53{
+public class Student57 {
     public String name;
     public String surname;
 
-    public Student53 (){
+    public Student57(){
     }
 
-   /* public Student53 (Student53 another){
+    public Student57(Student57 another){
         this.name = another.name;
         this.surname = another.surname;
     }
-*/
+
     public String getName(){
         return this.name;
     }
@@ -28,13 +28,18 @@ public class Student53{
         this.surname = sSurname;
     }
 
+    protected String toString(Student57 another){
+             return this.name;
+
+    }
+
     public static void main (String [] args)
     {
-        Student53 StudentFirst = new Student53();
-        StudentFirst.setName("Ivan");
+        Student57 StudentFirst = new Student57();
+        StudentFirst.setName("Nazar");
         StudentFirst.setSurname("Nazarenko");
 
-        Student53 StudentSecond  = StudentFirst;
+        Student57 StudentSecond  = new Student57(StudentFirst);
         StudentSecond.setName("Petro");
 
         System.out.println("    names after rename: ");
@@ -46,7 +51,9 @@ public class Student53{
         System.out.print("Student 2 " + StudentSecond.getName() + " ");
         System.out.println(StudentSecond.getSurname());
 
+        System.out.println("First Student name - " + StudentFirst.toString(StudentFirst));
+        System.out.println("Second Student name - " + StudentFirst.toString(StudentSecond));
     }
 
-
 }
+

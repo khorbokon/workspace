@@ -6,8 +6,7 @@ import java.util.List;
 public class hArrays {
 
     public static void main(String[] args) {
-        //Task 1 - ArrayList;
-        System.out.println("Task 2 - ArrayList: ");
+        System.out.println("ArrayList: ");
         List<Integer> hArray2 = new ArrayList<Integer>();
         hArray2.add(1);
         hArray2.add(6);

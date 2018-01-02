@@ -1,13 +1,13 @@
-package Task55;
+package Task56;
 
-public class Student55{
+public class Student56 {
     public String name;
     public String surname;
 
-    public Student55 (){
+    public Student56(){
     }
 
-    public Student55 (Student55 another){
+    public Student56(Student56 another){
         this.name = another.name;
         this.surname = another.surname;
     }
@@ -28,13 +28,19 @@ public class Student55{
         this.surname = sSurname;
     }
 
+    protected boolean equals(Student56 another){
+        if (another instanceof Student56) {
+            return (this.name.equals(another.name)) && (this.surname.equals(another.surname));}
+        else return false;
+    }
+
     public static void main (String [] args)
     {
-        Student55 StudentFirst = new Student55();
+        Student56 StudentFirst = new Student56();
         StudentFirst.setName("Nazar");
         StudentFirst.setSurname("Nazarenko");
 
-        Student55 StudentSecond  = new Student55(StudentFirst);
+        Student56 StudentSecond  = new Student56(StudentFirst);
         StudentSecond.setName("Petro");
 
         System.out.println("    names after rename: ");
@@ -46,6 +52,7 @@ public class Student55{
         System.out.print("Student 2 " + StudentSecond.getName() + " ");
         System.out.println(StudentSecond.getSurname());
 
+        System.out.println("Are students names equal? - " + StudentFirst.equals(StudentSecond));
     }
 
 

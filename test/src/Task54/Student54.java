@@ -1,15 +1,10 @@
-package Task55;
+package Task54;
 
-public class Student55{
+public class Student54 {
     public String name;
     public String surname;
 
-    public Student55 (){
-    }
-
-    public Student55 (Student55 another){
-        this.name = another.name;
-        this.surname = another.surname;
+    public Student54(){
     }
 
     public String getName(){
@@ -30,11 +25,11 @@ public class Student55{
 
     public static void main (String [] args)
     {
-        Student55 StudentFirst = new Student55();
-        StudentFirst.setName("Nazar");
+        Student54 StudentFirst = new Student54();
+        StudentFirst.setName("Ivan");
         StudentFirst.setSurname("Nazarenko");
 
-        Student55 StudentSecond  = new Student55(StudentFirst);
+        Student54 StudentSecond  = StudentFirst;
         StudentSecond.setName("Petro");
 
         System.out.println("    names after rename: ");
@@ -50,4 +45,3 @@ public class Student55{
 
 
 }
-
